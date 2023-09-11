@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../../views/components/css/stylesheet.css">
     <title>LoadDataP</title>
 </head>
 <body>
-<div id="grid-line">
-    <div class="cell spancol">Cell</div>
-    <div class="cell">Cell</div>
-    <div class="cell">Cell</div>
-    <div class="cell">Cell</div>
-</div>
-</div>
+    <div class="wrapper">
+        <div id="grid-line">
+                <div class="cell spancol-info">
+                    INFO FIELDs
+                </div>
+                <div class="cell spancol-input">
+                    <input type="file" name="file" accept=".csv">
+                </div>
+            <div class="cell">
+                <button type="submit" name="import">Import BUTTON</button>
+            </div>
+            <div class="cell">
+                Clear all records BUTTON
+            </div>
+            <div class="cell">
+                <a href="ShowDataP.html">View results BUTTON!</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

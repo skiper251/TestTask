@@ -1,4 +1,9 @@
 /* (A) GRID CONTAINER */
+
+.wrapper {
+    padding: 200px;
+    margin: auto;
+}
 #grid-line {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -7,13 +12,17 @@
 
 /* (B) GRID CELL */
 div.cell {
-    background: #fff600;
+    background: #d7de11;
     border: 1px solid #000;
     padding: 10px;
 }
 
 /* (C) SPAN MULTIPLE COLUMNS */
-.spancol {
+.spancol-info {
     grid-column-start: 1;
+    grid-column-end: 2;
+}
+.spancol-input {
+    grid-column-start: 2;
     grid-column-end: 4;
 }
