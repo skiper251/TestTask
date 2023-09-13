@@ -7,7 +7,7 @@ class App
 {
     public static function start()
     {
-       //self::dbconn();
+        self::dbconn();
         self::enterPoint();
     }
 
@@ -16,16 +16,14 @@ class App
         header("Location:/../views/pages/LoadDataP.html");
     }
 
-//    public static function dbconn()
-//    {
-//        $config = require_once "config/db_config.php";
-//        if($config['enable']){
-//            ( 'mysql:host=' . $config["host"] . ';port=' . $config["port"] . ';dbname=' . $config["db_name"] . '',
-//                $config["username"], $config["password"] ); //for both mysql or mariaDB
-//            if (!testConnection()){
-//                die('Error DB connection');
-//            }
-//        }
-//
-//    }
+    public static function dbconn()
+    {
+        $config = require_once "config/db_config.php";
+        $conn = mysqli_connect($config["host"], $config["username"], $config["password"],$config["db_name"]);
+
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        echo "Connected successfully";
+    }
 }
