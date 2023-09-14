@@ -9,22 +9,19 @@
 <body>
     <div class="wrapper">
         <div id="grid-line">
-                <div class="cell spancol-info">
-                    INFO FIELDs
-                </div>
+            <form action="../../app/querys/upload.php" method="post" name="uploadCsv" enctype="multipart/form-data">
                 <div class="cell spancol-input">
-<!--                            <form action="upload.php" method="post" enctype="multipart/form-data">-->
-<!--                                <h2>PHP Upload File</h2>-->
-<!--                                <label for="file_name">Filename:</label>-->
-<!--                                <input type="file" name="anyfile" id="anyfile">-->
-<!--                                <p><strong>Note:</strong> Only .jpg, .jpeg, .gif, .png formats allowed to a max size of 5 MB.</p>-->
-<!--                            </form>-->
+                    <input type="file" name="file" accept=".csv">
                 </div>
             <div class="cell">
-                <input type="submit" name="submit" value="Upload">
+                <input type="submit" name="submit" value="upload">
             </div>
+            </form>
             <div class="cell">
-                Clear all records BUTTON
+                <form action="../../app/querys/clearData.php" method="post" name="clearData">
+                    <a>Clear all data</a>
+                    <input type="submit" name="submit" value="Clear">
+                </form>
             </div>
             <div class="cell">
                 <a href="ShowDataP.html">View results BUTTON!</a>

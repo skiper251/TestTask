@@ -5,6 +5,8 @@ namespace App\services;
 
 class App
 {
+
+
     public static function start()
     {
         self::dbconn();
@@ -26,4 +28,5 @@ class App
         }
         echo "Connected successfully";
     }
+
 }
